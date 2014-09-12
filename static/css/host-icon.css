@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+.main-item-host-mark span {
+	padding: 1.5em;
+}
+/*========================== device ================================*/
+.main-item-host-mark span.host-device-computer {
+	background: url(./../images/host-icon/Computer-Desktop-128.png)
+		no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-device-mobile {
+	background: url(./../images/host-icon/Mobile-Phone-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-device-tablet {
+	background: url(./../images/host-icon/Tablet-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-device-unknow {
+	background: url(./../images/host-icon/Help-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+/*========================== system ================================*/
+.main-item-host-mark span.host-system-linux {
+	background: url(./../images/host-icon/Linux-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-system-windows {
+	background: url(./../images/host-icon/Microsoft-Windows-128.png)
+		no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-system-android {
+	background: url(./../images/host-icon/Android-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-system-blackberry {
+	background: url(./../images/host-icon/Blackberry-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-system-mac {
+	background: url(./../images/host-icon/Apple-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-system-ios {
+	background: url(./../images/host-icon/Apple-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-system-unknow {
+	background: url(./../images/host-icon/Help-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+/*========================== browser ================================*/
+.main-item-host-mark span.host-browser-chrome {
+	background: url(./../images/host-icon/Chrome-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-browser-ie {
+	background: url(./../images/host-icon/Internet-Explorer-128.png)
+		no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-browser-opera {
+	background: url(./../images/host-icon/Opera-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-browser-safari {
+	background: url(./../images/host-icon/Safari-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-browser-firefox {
+	background: url(./../images/host-icon/Firefox-128.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.main-item-host-mark span.host-browser-unkonw {
+	background: url(./../images/host-icon/Help-128.png) no-repeat;
+	background-size: 100% auto;
+}

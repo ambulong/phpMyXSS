@@ -1,0 +1,278 @@
+XSS Platform(JS代码混淆)
+
+./
+	search.php
+	hook.php
+	js.php
+	request.php
+./theme/
+	*login.html
+	*main.html			主页，项目列表页
+	*hosts.html		主机列表页
+	*modules.html	模块列表
+	//setting.html		设置
+	*add-proj.html		添加项目页
+	*edit-proj.html		编辑项目
+	*add-module.html	添加模块
+	*edit-module.html	编辑模块
+	*projs-items.html		项目内容列表
+	*projs-item-detail.html	项目内容详细
+	*hosts-item.html	主机管理
+	info.html
+./module/
+	add-proj.php
+	edit-proj.php
+	del-proj.php
+	add-module.php
+	edit-module.php
+	del-module.php
+	del-projs-item.php
+./open/
+	modules.php
+	module-detail.php
+	hosts.php
+	host-detail.php
+./lib/Project.php
+	-Proj();
+	-isExistID();
+	-isExistSaltID();
+	-addProj();
+	-getID();					-showID();
+	-updateProj();
+	-delProj($id);
+	-stopProj($id);
+	-startProj($id);
+	-getDetail($id);
+	-getTitle($id);				-showTitle($id);		-updateTitle();
+	-getDesc($id);				-showDesc($id);		-updateDesc();
+	-getItemNum($id);		-showItemNum($id);
+	-getSaltID($id);				-showSaltID($id);
+	-getIDByStalID();			-showIDByStalID();
+	-getExt($id);				-updateExt($id);
+	-getStatus($id);			-updateStatus();
+	-getProtection($id);	-updateProtection();
+	-getMailAlert($id);		-updateMailAlert();
+	-getMail($id);				-shwoMail($id);		-updateMail;
+	-getComments($id);	-showComments($id);	-updateComments();
+	-getModules($id);
+	-getModsSetting($id);
+	-getModSetting($id);
+	-getCode($id);				-showCode($id);
+	-getProtectedCode($id);	-showProtecitonCode($id);
+	-getItemList();
+./lib/Projects.php
+	-Projects();
+	-getProjList();
+./lib/ProjectItem.php
+	-ProjectItem();
+	-isExistID();
+	-addItem();
+	-getID();					-showID();
+	-delItem();
+	-getDetail();
+	-getExt($id);				-updateExt($id);
+./lib/ProjectItems.php
+	-ProjectItems();
+	-getItemList();
+./lib/Module.php
+	-Module();
+	-isExistID();
+	-addMod();
+	-getID();					-showID();
+	-updateMod();
+	-delMod($id);
+	-getDetail($id);
+	-getName();		-showName();	-updateName();
+	-getDesc();		-showDesc();		-updateDesc();
+	-getCode();		-showCode();		-updateCode();
+	-getVars();
+	-getExt($id);				-updateExt($id);
+./lib/Modules.php
+	-Modules();
+	-getModList();
+./lib/Host.php
+	-Host();
+	-isExistID();
+	-isExistSID();
+	-isExistIP();
+	-addHost();
+	-addLog();
+	-getID();					-showID();
+	-getSID();					-showSID();
+	-getIP();					-showIP();
+	-delHost;
+	-delHostByIP();
+	-getExt($id);				-updateExt($id);
+	-getLocation();
+	-getStatus();
+	-getFirstRequestTime();
+	-getFirstLatestTime();
+	-getHTTP_USER_AGENT();
+	-getHTTP_ACCEPT_LANGUAGE();
+	-getLogs();
+	-getCookies();
+./lib/Hosts.php
+	-Hosts();
+	-getHostList();
+./lib/HostLog.php
+	-HostLog();
+	-isExistID();
+	-addLog();
+	-getID();					-showID();
+	-delLog();
+	-getStatus();			-updateStatus();
+	-getDetail();
+	-getSID();
+	-getIP();
+	-getExt();
+	-getCommand();
+	-getCode();
+	-getProtectedCode();
+	-getResponse();		-updateResponse();
+./lib/HostLogs.php
+	-HostLogs();
+	-getLogList();
+	-getLogListByIP();
+	-getLogListBySID();
+./lib/Search.php
+	-Search();
+	-getResult();
+	
+----------------------------------
+Info				|
+Log					|mods
+Cookies			|
+----------------------------------
+Commands						|
+----------------------------------
+Nav
+	-Proj Mgmt
+	-Host Mgmt
+	-Module Mgmt
+	-Setting
+	-Logout
+------------------------------|
+title			|	module		|
+desc		|						|
+------------|						|
+status	|						|
+mail		|						|
+------------------------------|
+ext									|
+------------------------------|
+	cancel	submit		|
+------------------------------|
+
+Host:如购物标签
+module:
+
+基础模块
+------------------------------
+
+EXP 
+-----------------------------
+
+自定义
+------------------------------
+
+XSSPLATFORM
+
+Modules
+-IMG
+	--redirection（IMG）
+	--HTTP AUTH（IMG）
+	--IMG(Auto)//通过配置生成
+	--IMG//上传或者通过URL获取
+-JS
+	--基础模块
+		---Load jQuery 1.x
+		---Load jQuery 2.x
+		---getCookies POST
+		---getCookies GET
+		---hook.js
+		---xss.js
+		---pageinfo
+		---getLocation
+		---HTTP AUTH（JS）
+	--EXP（通过浏览器特征自动标记可用EXP，可能可用EXP，不可用EXP。点击EXP有全局设置，比如payloadURL）
+	--自定义
+	--添加模块
+		---基础模块（公开，私人）
+		---EXP（公开，私人）
+
+Hosts
+-Online
+	--Proj1
+		---192.0.0.1
+		---10.0.0.1
+		---…
+-Offline
+	--Proj1
+		---192.0.0.2
+		---10.0.0.2
+		---…
+
+Projs
+	-proj1
+		--配置
+		--数据
+	-proj2
+		--配置
+		--数据
+	…
+
+
+DB
+-user
+-pmx_project*
+	--id
+	--name
+	--desc
+	--status
+	--protection
+	--mailAlert
+	--mail
+	--comments
+	--mods(json:mid,config)
+	--addInfo(json:ip,time,httpinfo)
+	--lastEditInfo(json:ip,httpinfo,time)
+	--ext
+-pmx_projItem*
+	--id
+	--pid
+	--ip
+	--location
+	--topLocation
+	--cookies
+	--time
+	--HTTP_REFERER
+	--HTTP_USER_AGENT
+	--HTTP_ACCEPT_LANGUAGE
+	--data(json:)
+	--ext
+-pmx_module*
+	--id
+	--name
+	--desc
+	--only
+	--code
+	--addInfo(json:ip,time,httpinfo,uid)
+	--lastEditInfo(json:ip,httpinfo,time,uid)
+-pmx_hosts*
+	--id
+	--sid
+	--ip
+	--status
+	--firstRequest
+	--lastestRequest
+	--location
+	--HTTP_USER_AGENT
+	--HTTP_ACCEPT_LANGUAGE
+-pmx_hostLog*
+	--id
+	--sid
+	--command
+	--resp
+	--time
+	--respTime
+	--ext

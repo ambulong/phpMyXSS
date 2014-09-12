@@ -1,0 +1,132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add Module - phpMyXSS</title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./../css/custum.css">
+<script src="./../js/custum.js"></script>
+<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="nav-top pull-left">
+		<div class="nav-item nav-icon pull-left">
+			<span class="icon"></span><span class="tip"></span>
+		</div>
+		<div class="nav-item nav-title pull-left">Ambulong</div>
+		<div class="nav-search pull-right">
+			<form class="navbar-form" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">&nbsp;</button>
+			</form>
+		</div>
+	</div>
+	<div class="nav-left pull-left">
+		<ul>
+			<li class="nav-left-proj"><a href="#">Proj Mgmt</a><span
+				class="tip"></span></li>
+			<li class="nav-left-host"><a href="#">Host Mgmt</a></li>
+			<li class="nav-left-module"><a href="#">Module Mgmt</a></li>
+			<li class="nav-left-setting"><a href="#">Setting</a></li>
+			<li class="nav-left-logout"><a href="#">Logout</a></li>
+		</ul>
+	</div>
+	<div class="main">
+		<div class="main-item-single main-item-add-module pull-left">
+			<form class="form-horizontal" id="form-add-mod" action="#"
+				method="POST" role="form">
+				<div
+					class="main-item-single-block main-item-single-addmodule-setting">
+					<div class="add-module-item add-module-item-1">
+						<div class="form-group">
+							<label for="inputName" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-9">
+								<input type="text" name="name" class="form-control"
+									id="inputName" placeholder="Module Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputDesc" class="col-sm-2 control-label">Description</label>
+							<div class="col-sm-9">
+								<textarea name="desc" class="form-control" id="inputDesc"
+									placeholder="Module Description"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputCat" class="col-sm-2 control-label">Catalogue</label>
+							<div class="col-sm-9">
+								<label class="radio-inline"> <input type="radio"
+									name="optionsCat" id="optionsCat1" value="default">Default
+								</label> <label class="radio-inline"> <input type="radio"
+									name="optionsCat" id="optionsCat2" value="exp" checked>EXP
+								</label> <label class="radio-inline"> <input type="radio"
+									name="optionsCat" id="optionsCat3" value="custom" checked>Custom
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputOnly" class="col-sm-2 control-label">Only</label>
+							<div class="col-sm-9">
+								<label class="radio-inline"> <input type="radio"
+									name="optionsOnly" id="optionsOnly1" value="1">Yes
+								</label> <label class="radio-inline"> <input type="radio"
+									name="optionsOnly" id="optionsOnly2" value="0" checked>No
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="main-item-single-block main-item-single-addmod-module-config">
+					<div class="add-module-item add-module-item-2">
+						<p>
+							Project ID : {pmx.system.projid}<br> Define a const :
+							{pmx.define.xxx}<br> Const name : {pmx.define.xxx.name, "The
+							name of xxx"}
+						</p>
+						<p>
+							<b>Example:</b><br>
+							<code>
+								//{pmx.define.url.name, "Redirection URL"}<br>//{pmx.define.info.name,
+								"The text to alert"}<br>alert({pmx.define.xxx});<br>location.replace("{pmx.define.url}");
+							</code>
+						</p>
+					</div>
+				</div>
+				<div
+					class="main-item-single-block main-item-single-addmod-module-code">
+					<div class="add-module-item add-module-item-3">
+						<div class="form-group">
+							<label for="inputCode" class="col-sm-2 control-label">Code</label>
+							<div class="col-sm-9">
+								<textarea name="code" class="form-control" rows="13"
+									id="inputCode" placeholder="Module Code"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="main-item-single-block main-item-single-addmod-module-submit">
+					<button class="btn btn-primary pull-right" type="submit">Add
+						This Module</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+</html>

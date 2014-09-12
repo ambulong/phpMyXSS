@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edit Project - phpMyXSS</title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./../css/custum.css">
+<script src="./../js/custum.js"></script>
+<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="nav-top pull-left">
+		<div class="nav-item nav-icon pull-left">
+			<span class="icon"></span><span class="tip"></span>
+		</div>
+		<div class="nav-item nav-title pull-left">Ambulong</div>
+		<div class="nav-search pull-right">
+			<form class="navbar-form" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">&nbsp;</button>
+			</form>
+		</div>
+	</div>
+	<div class="nav-left pull-left">
+		<ul>
+			<li class="nav-left-proj"><a href="#">Proj Mgmt</a><span
+				class="tip"></span></li>
+			<li class="nav-left-host"><a href="#">Host Mgmt</a></li>
+			<li class="nav-left-module"><a href="#">Module Mgmt</a></li>
+			<li class="nav-left-setting"><a href="#">Setting</a></li>
+			<li class="nav-left-logout"><a href="#">Logout</a></li>
+		</ul>
+	</div>
+	<div class="main">
+		<div class="main-item-single main-item-add-proj pull-left">
+			<form class="form-horizontal" id="form-add-proj" action="#"
+				method="POST" role="form">
+				<div
+					class="main-item-single-left main-item-single-addproj-setting  pull-left">
+					<div class="add-proj-item add-proj-item-1">
+						<div class="form-group">
+							<label for="inputTitle" class="col-sm-2 control-label">Title</label>
+							<div class="col-sm-9">
+								<input type="text" name="title" class="form-control"
+									id="inputTitle" placeholder="Project Title">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputDesc" class="col-sm-2 control-label">Description</label>
+							<div class="col-sm-9">
+								<textarea name="desc" class="form-control" id="inputDesc"
+									placeholder="Project Description"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="add-proj-item add-proj-item-2">
+						<div class="form-group">
+							<label for="inputStatus" class="col-sm-2 control-label">Status</label>
+							<div class="col-sm-9">
+								<label class="radio-inline"> <input type="radio"
+									name="optionsStatus" id="optionsStatus1" value="1">On
+								</label> <label class="radio-inline"> <input type="radio"
+									name="optionsStatus" id="optionsStatus2" value="0" checked>Off
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputProtect" class="col-sm-2 control-label">Protectiton</label>
+							<div class="col-sm-9">
+								<label class="radio-inline"> <input type="radio"
+									name="optionsProtect" id="optionsProtect1" value="1">On
+								</label> <label class="radio-inline"> <input type="radio"
+									name="optionsProtect" id="optionsProtect2" value="0" checked>Off
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputMailAlert" class="col-sm-2 control-label">Mail
+								Alert</label>
+							<div class="col-sm-9">
+								<label class="radio-inline"> <input type="radio"
+									name="optionsMail" id="optionsMail1" value="1">On
+								</label> <label class="radio-inline"> <input type="radio"
+									name="optionsMail" id="optionsMail2" value="0" checked>Off
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputMail" class="col-sm-2 control-label">Mail</label>
+							<div class="col-sm-9">
+								<input type="text" name="mail" class="form-control"
+									id="inputMail" value="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="main-item-single-right main-item-single-addproj-module pull-left">
+					<div class="add-proj-item add-proj-item-4 add-proj-item-module">
+						<div class="module-item selected only">
+							<a href="#">Redirection（IMG） - This is the description of
+								this module. </a>
+						</div>
+						<div class="module-item">
+							<a href="#">Get Cookies - This is the description of this
+								module. </a>
+						</div>
+						<div class="module-item selected">
+							<a href="#">Hook.js - This is the description of this module.
+							</a>
+						</div>
+						<div class="module-item">
+							<a href="#">xss.js - This is the description of this module.
+							</a>
+						</div>
+						<div class="module-item selected">
+							<a href="#">Internet Explorer 8 - Fixed Col Span ID Full
+								ASLR, DEP & EMET 4.1.X Bypass - This is the description of this
+								module. </a>
+						</div>
+						<div class="module-item">
+							<a href="#">x - This is the description of this module. </a>
+						</div>
+						<div class="module-item">
+							<a href="#">x - This is the description of this module. </a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+						<div class="module-item">
+							<a href="#">x</a>
+						</div>
+					</div>
+				</div>
+				<div
+					class="main-item-single-left main-item-single-addproj-mod-setting pull-left">
+					<div class="add-proj-item add-proj-item-5">
+						<div class="form-group">
+							<label for="inputComments" class="col-sm-2 control-label">Comments</label>
+							<div class="col-sm-9">
+								<textarea name="comments" class="form-control"
+									id="inputComments" placeholder="Project Comments"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputTitle" class="col-sm-2 control-label">Payload</label>
+							<div class="col-sm-9">
+								<input type="text" name="paylod" class="form-control"
+									id="inputTitle"
+									placeholder="Payload URL - Internet Explorer 8 - Fixed Col Span ID Full ASLR, DEP & EMET 4.1.X Bypass">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputTitle" class="col-sm-2 control-label">URL</label>
+							<div class="col-sm-9">
+								<input type="text" name="paylod" class="form-control"
+									id="inputTitle"
+									placeholder="Redirection URL - Redirection（IMG）">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="main-item-single-left pull-left main-item-add-proj-submit">
+					<button class="btn btn-primary pull-right" type="submit">Save
+						This Project</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+</html>
