@@ -58,7 +58,3 @@ Fork us!
 
 This software is licenced under the [GPL 2.0](http://www.gnu.org/licenses/gpl-2.0.html). Please read LICENSE for information on the
 software availability and distrib
-
-### ACKNOWLEDGEMENTS
-
-This is a project for [精弘网络](http://www.zjut.com)
