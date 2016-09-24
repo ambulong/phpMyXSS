@@ -199,3 +199,17 @@ function get_url_domain($referer) {
 	$domain = isset ( $matches [2] ) ? $matches [2] : "unknow";
 	return $domain;
 }
+
+/**
+ * 合并斜杠
+ * 
+ * @param string $str
+ * @return string 
+ */
+function mergeSlash($str){
+    $str = str_replace('//', '/', $str);
+    if(strpos($str, '//') == false)
+        return $str;
+    else
+        return mergeSlash ($str);
+}

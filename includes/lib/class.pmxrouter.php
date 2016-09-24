@@ -51,6 +51,7 @@ class pmxRouter {
 	public function __construct() {
 		$current_url = strtolower ( get_url () );
 		$this->URI = substr ( $current_url, strlen ( PMX_SITEURL ), strlen ( $current_url ) - strlen ( PMX_SITEURL ) );
+                $this->URI = mergeSlash($this->URI);
 	}
 	
 	/**
