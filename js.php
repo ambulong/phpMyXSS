@@ -6,6 +6,8 @@ require (dirname ( __FILE__ ) . '/public-init.php');
 
 $current_url = get_url ();
 $URI = substr ( $current_url, strlen ( PMX_SITEURL ), strlen ( $current_url ) - strlen ( PMX_SITEURL ) );
+if(substr($URI, 0, 1) !== '/')
+                        $URI = '/'.$URI;
 $uri = explode ( '/', $URI );
 $saltid = substr ( $uri [2], 0, 8 );
 
