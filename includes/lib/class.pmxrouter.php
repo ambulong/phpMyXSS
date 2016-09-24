@@ -60,7 +60,7 @@ class pmxRouter {
 	 */
 	public function init() {
 		$uri = explode ( '/', $this->URI );
-		
+                
 		// validate uri
 		if (! in_array ( $uri [2], $this->MODULE )) {
 			pmx_gourl_home ();

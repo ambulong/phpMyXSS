@@ -6,17 +6,17 @@ define ( 'PMX_USERNAME', 'root' );
 /**
  * The password(phpass) for phpMyXSS
  */
-define ( 'PMX_PASSWORD', '' );
+define ( 'PMX_PASSWORD', '$2a$08$p8fMax0stoVUhkAEKR1SuO35qib6WwyIXEU5czCkTdaYeVAF4OoiK' );
 
 /**
  * The name of the MySQL database
  */
-define ( 'PMX_DB_NAME', '' );
+define ( 'PMX_DB_NAME', 'pmx' );
 
 /**
  * MySQL database username
  */
-define ( 'PMX_DB_USER', '' );
+define ( 'PMX_DB_USER', 'root' );
 
 /**
  * MySQL database password
@@ -46,7 +46,7 @@ define ( 'PMX_SITENAME', 'phpMyXSS' );
 /**
  * The URL of your site
  */
-define ( 'PMX_SITEURL', 'http://192.168.0.103/phpMyXSS' );
+define ( 'PMX_SITEURL', 'http://127.0.0.1:8010/' );
 
 /**
  * For developers
