@@ -40,7 +40,7 @@ If you have encountered a potential security vulnerability in this project, plea
 
    把phpmyxss.sql导入数据库并修改./config.php内的数据库连接信息即可
 
-   PMX暂时不支持无多用户支持，如果需要更改用户名和密码需要到config.php修改，密码（PMX_PASSWORD）请自己用phpass生成。
+   PMX暂时不支持无多用户支持，如果需要更改用户名和密码需要到config.php修改，密码（PMX_PASSWORD）请自己用phpass生成，或者目录下的genpass.php生成。
 
    邮件提醒请到./includes/functions.php修改函数pmx_mail()内的配置
    
