@@ -50,6 +50,14 @@ If you have encountered a potential security vulnerability in this project, plea
 
 4.如果有其它问题或者建议可发送邮件询问
 
+###更新
+
+   2016年09月25日
+
+      1. 修复无限重定向问题
+
+      2. 添加生成phpass密码脚本，genpass.php
+
 ###Want to contribute?
 
 Fork us!
